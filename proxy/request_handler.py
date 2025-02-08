@@ -1,6 +1,7 @@
 import socket
+from typing import Tuple
 
-def extract_target_host(request: bytes) -> tuple[str, int]:
+def extract_target_host(request: bytes) -> Tuple[str, int]:
     lines: list[str] = request.decode(errors='ignore').split('\r\n')
     target_host: str | None = None
     target_port: int = 80  # Default HTTP port

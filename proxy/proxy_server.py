@@ -1,10 +1,7 @@
 import socket
 import threading
 from proxy.request_handler import handle_client
-
-# Configuration
-HOST: str = '127.0.0.1'  # Proxy server address
-PORT: int = 7777         # Proxy server port
+from configure.settings import HOST, PORT
 
 def start_proxy():
     server: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
